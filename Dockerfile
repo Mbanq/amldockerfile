@@ -1,14 +1,6 @@
-# TO BUILD, RUN `docker build -t aws .`
-# TO RUN, call `docker run --rm -ti aws`
-
 FROM amazonlinux:2
 
 RUN yum install gcc openssl-devel bzip2-devel libffi-devel make tar gzip docker -q -y
-#RUN yum install -y python3-pip python3 python3-setuptools
-#RUN amazon-linux-extras install docker -y
-#RUN dockerd &
-#RUN service docker start 
-
 
 # DOWNLOAD PYTHON
 WORKDIR /usr/src
@@ -51,7 +43,3 @@ RUN source venv/bin/activate
 
 # PACKAGING PYTHON WITH PLUGGINS
 RUN pip3.7 install -r requirements.txt
-#RUN python3.7 handler.py
-#RUN npm init --yes
-#RUN npm install --save serverless-python-requirements
-#RUN serverless deploy
