@@ -27,12 +27,6 @@ RUN npm install -g serverless
 RUN curl -O https://bootstrap.pypa.io/get-pip.py
 RUN python3.7 get-pip.py --user
 
-
-# EXAMPLE
-WORKDIR /home/tmp
-COPY . .
-
 # VENV
 RUN pip3.7 install virtualenvwrapper
-RUN virtualenv venv --python=python3.7
-RUN source venv/bin/activate
+
