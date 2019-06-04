@@ -36,7 +36,3 @@ COPY . .
 RUN pip3.7 install virtualenvwrapper
 RUN virtualenv venv --python=python3.7
 RUN source venv/bin/activate
-
-
-# PACKAGING PYTHON WITH PLUGGINS
-RUN pip3.7 install -r requirements.txt
